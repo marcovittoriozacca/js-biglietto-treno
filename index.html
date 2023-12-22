@@ -11,30 +11,37 @@
     <!-- personal CSS -->
     <link rel="stylesheet" href="./assets/CSS/style.css">
 </head>
-<body>
+<body class="vh-100">
     
-    <header>
-        <div class="container-sm">
-            <h1 class="text-center">Prenota il tuo biglietto!</h1>
-        </div>
-    </header>
-
     <main>
-        <div class="container text-center">
-            
-            <label for="numeroKM">Numero KM da percorrere:</label>
-            <input type="number" name="numero-km" id="numeroKM" min="1" required>
-            <br><br>
-            <label for="etaPsg">Età del passeggero:</label>
-            <input type="number" name="numero-km" id="etaPsg" min="0" required>
-            <br><br>
-            <button id="submitValues">Click</button>
-            <button id="reset-all">Reset</button>
-            
+        <div class="pt-5 px-3 d-flex justify-content-center">
+            <div class="rounded shadow-md p-5 d-flex flex-column row-gap-4 align-items-center my_opacity">
+                <div>
+                    <h2>Prenota il tuo biglietto!</h2>
+                </div>
+                <div class="d-flex flex-column align-items-center row-gap-2 flex-md-row column-gap-3">
+                    <label for="numeroKM" class="fw-bold">Numero KM da percorrere:</label>
+                    <input type="number" name="numero-km" id="numeroKM" min="1" required class="border">
+                </div>
 
-            <p id="error"></p>
-            <p id="finalPrice"></p>
+                <div class="d-flex flex-column align-items-center row-gap-2 flex-md-row column-gap-3 align-self-md-end">
+                    <label for="etaPsg" class="fw-bold">Età del passeggero:</label>
+                    <input type="number" name="numero-km" id="etaPsg" min="0" required class="border">
+                </div>
+                
+                <div class="d-flex column-gap-3">
+                    <button id="submitValues" class="btn bg-primary text-light">Calcola prezzo</button>
+                    <button id="reset-all" class="btn bg-danger text-light">Reset</button>
+                </div>
+                
+            </div>
+            
         </div>
+
+        <div id="classChange" class="d-none mt-3 flex-column align-items-center px-5 pb-5">
+            <div id="result" class="rounded shadow-sm p-4 mt-3 my_opacity d-flex flex-column"></div>
+        </div>
+
     </main>
 
     <!-- bootstrap JS -->
