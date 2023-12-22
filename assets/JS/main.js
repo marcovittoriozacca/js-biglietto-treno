@@ -7,6 +7,7 @@ function getValues(){
 
     if ((kmNumber.length == 0 || psgAge.length == 0) || (kmNumber <= 0 || psgAge <= 0)){
         document.getElementById("error").innerHTML = "Compila tutti i campi correttamente!";
+        document.getElementById("finalPrice").innerHTML = null;
     }
     else{
         document.getElementById("error").innerHTML = null;
